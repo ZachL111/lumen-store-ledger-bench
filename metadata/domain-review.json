@@ -1,0 +1,73 @@
+{
+  "repo": "lumen-store-ledger-bench",
+  "language": "Swift",
+  "category": "Databases",
+  "goal": "Develop a Swift command-oriented project for ledger scenarios with seeded input scenarios, deterministic summary checks, and fixture-scale datasets.",
+  "review_model": {
+    "terms": [
+      "index fit",
+      "join width",
+      "constraint risk",
+      "plan drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "index fit",
+      "signal": 53,
+      "slack": 25,
+      "drag": 19,
+      "confidence": 46,
+      "score": 120,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "join width",
+      "signal": 65,
+      "slack": 35,
+      "drag": 10,
+      "confidence": 45,
+      "score": 180,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "constraint risk",
+      "signal": 74,
+      "slack": 53,
+      "drag": 20,
+      "confidence": 82,
+      "score": 223,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "plan drift",
+      "signal": 57,
+      "slack": 22,
+      "drag": 20,
+      "confidence": 91,
+      "score": 167,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "index fit",
+      "signal": 73,
+      "slack": 22,
+      "drag": 21,
+      "confidence": 69,
+      "score": 174,
+      "lane": "ship"
+    }
+  ]
+}
